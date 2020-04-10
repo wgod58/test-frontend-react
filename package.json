@@ -6,15 +6,25 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "aws-amplify": "^2.2.7",
+    "aws-amplify-react": "^3.1.8",
+    "bootstrap": "^4.4.1",
+    "node-sass": "^4.13.1",
     "react": "^16.13.1",
+    "react-bootstrap": "^1.0.0",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.1"
+    "react-redux": "^7.2.0",
+    "react-router-dom": "^5.1.2",
+    "react-scripts": "3.4.1",
+    "redux": "^4.0.5"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "lint": "./node_modules/.bin/eslint src",
+    "lint:fix": "esw --fix \"./src/**/*.js\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -30,5 +40,20 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.1",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-config-standard-jsx": "^8.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-react": "^7.19.0",
+    "eslint-plugin-standard": "^4.0.1",
+    "eslint-watch": "^6.0.1",
+    "prettier": "^2.0.2"
   }
 }
