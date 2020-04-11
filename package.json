@@ -1,5 +1,5 @@
 {
-  "name": "test-frontend-react",
+  "name": "amplify",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,10 +8,13 @@
     "@testing-library/user-event": "^7.1.2",
     "aws-amplify": "^2.2.7",
     "aws-amplify-react": "^3.1.8",
+    "axios": "^0.19.2",
     "bootstrap": "^4.4.1",
+    "moment": "^2.24.0",
     "node-sass": "^4.13.1",
     "react": "^16.13.1",
     "react-bootstrap": "^1.0.0",
+    "react-datepicker": "^2.14.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.0",
     "react-router-dom": "^5.1.2",
@@ -24,7 +27,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "lint": "./node_modules/.bin/eslint src",
-    "lint:fix": "esw --fix \"./src/**/*.js\""
+    "lint:fix": "esw --fix \"./src/**/*.js\"",
+    "publish": "react-scripts build && aws s3 cp ./build/ s3://test.zed-pai.com/ --recursive --include \"*\""
   },
   "eslintConfig": {
     "extends": "react-app"

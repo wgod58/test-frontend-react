@@ -1,29 +1,24 @@
-import React from "react";
-import { BrowserRouter as Router } from "react-router-dom";
-import logo from "./logo.svg";
-import "./App.css";
-
+import React from 'react'
+import AppWrapper from './AppWrapper'
+import { BrowserRouter as Router } from 'react-router-dom'
+import { Authenticator } from 'aws-amplify-react'
+import Default from './components/Default'
+import Header from './scenes/Header'
+import Footer from './scenes/Footer'
+import './App.css'
 function App() {
   return (
-    <div className="App">
+    <div className='App'>
       <Router>
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+        <Authenticator hideDefault>
+          <Header />
+          <AppWrapper />
+          <Default />
+          <Footer />
+        </Authenticator>
       </Router>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
